@@ -40,41 +40,88 @@
             <artifactId>reportng</artifactId>
         </dependency>
     </dependencies>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <version>3.8.1</version>-->
+<!--                <configuration>-->
+<!--                    <source>8</source>-->
+<!--                    <target>8</target>-->
+<!--                    <compilerArgs>-->
+<!--                        <arg>-Xlint:unchecked</arg>-->
+<!--                        <arg>-Xlint:deprecation </arg>-->
+<!--                        &lt;!&ndash;<arg>endorseddirs=${endorsed.dir}</arg>&ndash;&gt;-->
+<!--                    </compilerArgs>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            &lt;!&ndash; 添加插件 关联testNg.xml&ndash;&gt;-->
+<!--            <plugin>-->
+<!--                &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin &ndash;&gt;-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>2.19</version>-->
+<!--                <configuration>-->
+<!--                    <testFailureIgnore>true</testFailureIgnore>-->
+<!--                    <suiteXmlFiles>-->
+<!--                        &lt;!&ndash; 指定用例启动执行文件路径 &ndash;&gt;-->
+<!--                        &lt;!&ndash;                        <suiteXmlFile>${xmlFileName}</suiteXmlFile>&ndash;&gt;-->
+<!--                        <suiteXmlFile>*.testNg.xml</suiteXmlFile>-->
+<!--                    </suiteXmlFiles>-->
+<!--                    <workingDirectory>target/</workingDirectory>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
+
+
+
+
     <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/main/java</testSourceDirectory>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                    <compilerArgs>
-                        <arg>-Xlint:unchecked</arg>
-                        <arg>-Xlint:deprecation </arg>
-                        <!--<arg>endorseddirs=${endorsed.dir}</arg>-->
-                    </compilerArgs>
+                    <source>7</source>
+                    <target>7</target>
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-            <!-- 添加插件 关联testNg.xml-->
             <plugin>
-                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19</version>
+                <version>2.5</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
+                    <!-- <testNGArtifactName>org.testng:testng</testNGArtifactName>-->
+                    <forkMode>once</forkMode>
+                    <!--<skipTests>true</skipTests>-->
+
+                    <skipTests>false</skipTests>
                     <suiteXmlFiles>
-                        <!-- 指定用例启动执行文件路径 -->
-                        <!--                        <suiteXmlFile>${xmlFileName}</suiteXmlFile>-->
-                        <suiteXmlFile>*.testNg.xml</suiteXmlFile>
+                        <suiteXmlFile>suites/test.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    <workingDirectory>target/</workingDirectory>
+                    <!--                        <properties>-->
+                    <!--                            <property>-->
+                    <!--                                <name>usedefaultlisteners</name>-->
+                    <!--                                <value>false</value>-->
+                    <!--                            </property>-->
+                    <!--                            <property>-->
+                    <!--                                <name>listener</name>-->
+                    <!--                                <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter</value>-->
+                    <!--                            </property>-->
+                    <!--                        </properties>-->
+                    <!--                        <forkMode>always</forkMode>-->
                 </configuration>
+
             </plugin>
         </plugins>
     </build>
-
     <properties>
         <project.build.sourceEncoding>
             UTF-8
