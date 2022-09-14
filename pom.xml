@@ -64,6 +64,7 @@
                 <version>2.19</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
+                    <argLine>-Dfile.encoding=UTF-8 -Xmx1024m -XX:MaxPermSize=256m</argLine>
                     <suiteXmlFiles>
                         <!-- 指定用例启动执行文件路径 -->
                                                 <!--suppress UnresolvedMavenProperty -->
