@@ -66,8 +66,9 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
                         <!-- 指定用例启动执行文件路径 -->
-                        <!--                        <suiteXmlFile>${xmlFileName}</suiteXmlFile>-->
-                        <suiteXmlFile>*.testNg.xml</suiteXmlFile>
+                                                <!--suppress UnresolvedMavenProperty -->
+                        <suiteXmlFile>${xmlFileName}</suiteXmlFile>
+<!--                        <suiteXmlFile>*.testNg.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                     <workingDirectory>target/</workingDirectory>
                 </configuration>
