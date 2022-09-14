@@ -18,7 +18,7 @@ import java.util.HashMap;
 
 public class CourseRecord404 extends testbasic {
 
-    @Test
+    @Test(enabled = false)
     public void wo404() throws Exception{
 //        login login = new login();
 //        String token = login.login();
