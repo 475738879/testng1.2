@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-test-parameter">
-              <span class="suite-name border-passed">test-parameter</span>
+              <span class="suite-name border-failed">test-parameter</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-test-parameter" class="hide-methods failed suite-test-parameter"> (hide)</a> <!-- hide-methods failed suite-test-parameter -->
+                      <a href="#" panel-name="suite-test-parameter" class="show-methods failed suite-test-parameter"> (show)</a> <!-- show-methods failed suite-test-parameter -->
+                    </span>
+                    <div class="method-list-content failed suite-test-parameter">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-test-parameter" title="com.hxk.online.CourseRecord404" hash-for-method="wo404">wo404</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-test-parameter -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +116,17 @@
                     <div class="method-list-content passed suite-test-parameter">
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-test-parameter" title="com.hxk.online.Index" hash-for-method="index">index</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-test-parameter" title="com.hxk.online.TestDemo" hash-for-method="test1">test1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-test-parameter" title="com.hxk.online.TestDemo2" hash-for-method="test1">test1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-test-parameter -->
@@ -117,6 +141,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-test-parameter" class="panel test-parameter">
+          <div class="suite-test-parameter-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.hxk.online.CourseRecord404</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="wo404">
+                  </a> <!-- wo404 -->
+                  <span class="method-name">wo404</span>
+                  <div class="stack-trace">java.lang.AssertionError: 服务器返回的状态码不是200 expected [200] but found [503]
+	at com.hxk.online.CourseRecord404.wo404(CourseRecord404.java:61)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-test-parameter-class-failed -->
           <div class="suite-test-parameter-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -128,6 +173,36 @@
                   <a name="test1">
                   </a> <!-- test1 -->
                   <span class="method-name">test1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-test-parameter-class-passed -->
+          <div class="suite-test-parameter-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.hxk.online.TestDemo2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1">
+                  </a> <!-- test1 -->
+                  <span class="method-name">test1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-test-parameter-class-passed -->
+          <div class="suite-test-parameter-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.hxk.online.Index</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="index">
+                  </a> <!-- index -->
+                  <span class="method-name">index</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -146,8 +221,16 @@
     &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test name=&quot;examplel&quot;&gt;
+    &lt;packages&gt;
+      &lt;package name=&quot;com.hxk.online&quot;/&gt;
+    &lt;/packages&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.hxk.online.CourseRecord404&quot;/&gt;
+      &lt;class name=&quot;com.hxk.online.Index&quot;/&gt;
+      &lt;class name=&quot;com.hxk.online.Login&quot;/&gt;
+      &lt;class name=&quot;com.hxk.online.ReadToken&quot;/&gt;
       &lt;class name=&quot;com.hxk.online.TestDemo&quot;/&gt;
+      &lt;class name=&quot;com.hxk.online.TestDemo2&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- examplel --&gt;
 &lt;/suite&gt; &lt;!-- test-parameter --&gt;
@@ -161,7 +244,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">examplel (1 class)</span>
+                <span class="test-name">examplel (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,16 +270,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test1')
-data.setCell(0, 2, 'com.hxk.online.TestDemo')
-data.setCell(0, 3, 17);
+data.setCell(0, 1, 'wo404')
+data.setCell(0, 2, 'com.hxk.online.CourseRecord404')
+data.setCell(0, 3, 697);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'index')
+data.setCell(1, 2, 'com.hxk.online.Index')
+data.setCell(1, 3, 170);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'test1')
+data.setCell(2, 2, 'com.hxk.online.TestDemo')
+data.setCell(2, 3, 0);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'test1')
+data.setCell(3, 2, 'com.hxk.online.TestDemo2')
+data.setCell(3, 3, 0);
 window.suiteTableData['test-parameter']= { tableData: data, tableDiv: 'times-div-test-parameter'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 ms</span>
+              <span class="suite-total-time">Total running time: 867 ms</span>
               <div id="times-div-test-parameter">
               </div> <!-- times-div-test-parameter -->
             </div> <!-- times-div -->
@@ -222,10 +317,33 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">com.hxk.online.CourseRecord404</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">wo404</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">com.hxk.online.TestDemo</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">test1</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">715 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hxk.online.Index</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">index</span>
+                <span class="method-start">715 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hxk.online.TestDemo2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">test1</span>
+                <span class="method-start">885 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
