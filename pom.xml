@@ -42,36 +42,52 @@
     </dependencies>
     <build>
         <plugins>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <version>3.8.1</version>-->
+<!--                <configuration>-->
+<!--                    <source>8</source>-->
+<!--                    <target>8</target>-->
+<!--                    <compilerArgs>-->
+<!--                        <arg>-Xlint:unchecked</arg>-->
+<!--                        <arg>-Xlint:deprecation </arg>-->
+<!--                        &lt;!&ndash;<arg>endorseddirs=${endorsed.dir}</arg>&ndash;&gt;-->
+<!--                    </compilerArgs>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            &lt;!&ndash; 添加插件 关联testNg.xml&ndash;&gt;-->
+<!--            <plugin>-->
+<!--                &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin &ndash;&gt;-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>2.19</version>-->
+<!--                <configuration>-->
+<!--                    <testFailureIgnore>true</testFailureIgnore>-->
+<!--                    <argLine>-Dfile.encoding=UTF-8 -Xmx1024m -XX:MaxPermSize=256m</argLine>-->
+<!--                    <suiteXmlFiles>-->
+<!--                        &lt;!&ndash; 指定用例启动执行文件路径 &ndash;&gt;-->
+<!--                                                &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+<!--                        <suiteXmlFile>${xmlFileName}</suiteXmlFile>-->
+<!--&lt;!&ndash;                        <suiteXmlFile>*.testNg.xml</suiteXmlFile>&ndash;&gt;-->
+<!--                    </suiteXmlFiles>-->
+<!--                    <workingDirectory>target/</workingDirectory>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+
+
+
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                    <compilerArgs>
-                        <arg>-Xlint:unchecked</arg>
-                        <arg>-Xlint:deprecation </arg>
-                        <!--<arg>endorseddirs=${endorsed.dir}</arg>-->
-                    </compilerArgs>
-                </configuration>
-            </plugin>
-            <!-- 添加插件 关联testNg.xml-->
-            <plugin>
-                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19</version>
                 <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <argLine>-Dfile.encoding=UTF-8 -Xmx1024m -XX:MaxPermSize=256m</argLine>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
                     <suiteXmlFiles>
-                        <!-- 指定用例启动执行文件路径 -->
-                                                <!--suppress UnresolvedMavenProperty -->
+                        <!--suppress UnresolvedMavenProperty -->
                         <suiteXmlFile>${xmlFileName}</suiteXmlFile>
-<!--                        <suiteXmlFile>*.testNg.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
-                    <workingDirectory>target/</workingDirectory>
                 </configuration>
             </plugin>
         </plugins>
