@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
+<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="test-parameter" duration-ms="874" started-at="2022-09-14T08:57:32Z" finished-at="2022-09-14T08:57:33Z">
+  <suite started-at="2022-09-16T06:15:26Z" name="test-parameter" finished-at="2022-09-16T06:15:26Z" duration-ms="627">
     <groups>
     </groups>
-    <test name="examplel" duration-ms="874" started-at="2022-09-14T08:57:32Z" finished-at="2022-09-14T08:57:33Z">
+    <test started-at="2022-09-16T06:15:26Z" name="examplel" finished-at="2022-09-16T06:15:26Z" duration-ms="627">
       <class name="com.hxk.online.TestDemo2">
-        <test-method status="PASS" signature="test1()[pri:0, instance:com.hxk.online.TestDemo2@d2cc05a]" name="test1" duration-ms="0" started-at="2022-09-14T16:57:33Z" finished-at="2022-09-14T16:57:33Z">
+        <test-method signature="test1()[pri:0, instance:com.hxk.online.TestDemo2@70325e14]" started-at="2022-09-16T14:15:26Z" name="test1" finished-at="2022-09-16T14:15:26Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
       </class> <!-- com.hxk.online.TestDemo2 -->
       <class name="com.hxk.online.TestDemo">
-        <test-method status="PASS" signature="test1()[pri:0, instance:com.hxk.online.TestDemo@7dc7cbad]" name="test1" duration-ms="1" started-at="2022-09-14T16:57:33Z" finished-at="2022-09-14T16:57:33Z">
+        <test-method signature="test1()[pri:0, instance:com.hxk.online.TestDemo@23348b5d]" started-at="2022-09-16T14:15:26Z" name="test1" finished-at="2022-09-16T14:15:26Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
       </class> <!-- com.hxk.online.TestDemo -->
       <class name="com.hxk.online.Index">
-        <test-method status="PASS" signature="index()[pri:0, instance:com.hxk.online.Index@58651fd0]" name="index" duration-ms="854" started-at="2022-09-14T16:57:32Z" finished-at="2022-09-14T16:57:33Z">
+        <test-method signature="index()[pri:0, instance:com.hxk.online.Index@131ef10]" started-at="2022-09-16T14:15:26Z" name="index" finished-at="2022-09-16T14:15:26Z" duration-ms="607" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- index -->
