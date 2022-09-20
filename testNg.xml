@@ -2,7 +2,7 @@
 <!-- parallel="packages" 并行执行-->
 <suite name="test-parameter">
     <test name="examplel">
-<!--         1       <classes>-->
+<!--                <classes>-->
 <!--                    <class name="com.hxk.online.TestDemo"/>-->
 <!--                 </classes>-->
         <!--如果有多个测试类，就写在这里，格式：包名.测试类名-->
