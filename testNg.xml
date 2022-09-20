@@ -10,7 +10,7 @@
             <package name="com.hxk.online" />
             <package name="com.hxk.online.course" />
             <package name="com.hxk.online.sale" />
-            <package name="com.hxk.ltp_app" />
+            <package name="com.hxk.lpt_app" />
         </packages>
 
         <listeners>
