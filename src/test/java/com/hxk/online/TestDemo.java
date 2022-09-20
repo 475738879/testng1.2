@@ -1,5 +1,6 @@
 package com.hxk.online;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestDemo {

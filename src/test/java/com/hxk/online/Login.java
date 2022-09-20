@@ -13,6 +13,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -36,8 +37,10 @@ public class Login extends testbasic {
         // 通过HttpPost来发送post请求，带Body参数
         HttpPost httpPost = new HttpPost("https://api-test.liupinshuyuan.com/userCenter/api/v1/login/backLogin");
         JSONObject jsonParam = new JSONObject();
-        jsonParam.put("userAccount", "13429667373");
-        jsonParam.put("password", "he475738879123");
+//        jsonParam.put("userAccount", "13429667373");
+//        jsonParam.put("password", "he475738879123");
+        jsonParam.put("userAccount","18258280484");
+        jsonParam.put("password","1825828048");
         jsonParam.put("platId",4);
         //添加headers内容
         httpPost.addHeader("system","eduOnline");

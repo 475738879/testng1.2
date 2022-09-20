@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import java.util.HashMap;
 
-public class Nchannel_list extends testbasic {
+public class Nchannel_list extends testbasic{
 
     @Test
     public void nchannel_list() throws Exception{
@@ -24,7 +24,8 @@ public class Nchannel_list extends testbasic {
 
         HttpGet httpGet=new HttpGet("https://api-test.liupinshuyuan.com/sale/nchannel-list?page=1&per_page=20");
         httpGet.addHeader("Authorization",token);
-
+        httpGet.addHeader("user-role-type","admin");
+        httpGet.addHeader("system","eduOnline");
         // 通过HttpClient来执行请求，获取一个响应结果
         CloseableHttpClient httpClient = HttpClients.createDefault();
 
@@ -52,6 +53,7 @@ public class Nchannel_list extends testbasic {
         // 获取Response Body结果
         String str = EntityUtils.toString(httpentity, "utf-8");
         System.out.println("nchannel_list接口的Response Body结果为：" + str);
+        System.out.println(token);
         // 添加断言其二，获取服务器响应的状态码
         Assert.assertEquals(statusCode, RESPNSE_STATUS_CODE_200, "服务器返回的状态码不是200");
         System.out.println("服务器响应的状态码为：" + statusCode);

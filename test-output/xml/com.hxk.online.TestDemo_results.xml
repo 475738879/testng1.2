@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.000">
+           time="0.008">
   <properties />
   
   
-            <testcase name="test1" time="0.000" classname="com.hxk.online.TestDemo" />
+            <testcase name="test1" time="0.008" classname="com.hxk.online.TestDemo" />
       
 </testsuite>

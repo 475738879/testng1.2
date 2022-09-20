@@ -1,5 +1,6 @@
 package com.hxk.online;
 
+import com.hxk.online.ReadToken;
 import com.methodpackage.basic.testbasic;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -18,13 +19,14 @@ public class Index extends testbasic {
 
     @Test
     public void index() throws Exception{
-//        login login = new login();
+//        Login login = new Login();
 //        String token = login.login();
         ReadToken readToken = new ReadToken();
         String token = readToken.readTxt();
 
-        HttpGet httpGet=new HttpGet("https://api-test.liupinshuyuan.com/curricula/course/admin_video/index?id=&video_title=&page=1&per_page=20");
+        HttpGet httpGet=new HttpGet("https://api-test.liupinshuyuan.com/sale/nchannel-list?page=1&per_page=20");
         httpGet.addHeader("Authorization",token);
+        httpGet.addHeader("user-role-type","admin");
 //        StringEntity entity = new StringEntity(jsonParam.toString(),"utf-8");
 //        entity.setContentEncoding("UTF-8");
 //
