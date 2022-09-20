@@ -75,7 +75,7 @@ public class Homework_List extends testbasic {
 
         // 获取Response Body结果
         String str = EntityUtils.toString(httpentity, "utf-8");
-        System.out.println("登录接口的Response Body结果为：" + str);
+        System.out.println("Homework_List接口的Response Body结果为：" + str);
 
     }
 }
