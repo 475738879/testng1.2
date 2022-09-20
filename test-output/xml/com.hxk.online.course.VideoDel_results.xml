@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="2.340">
+           time="2.127">
   <properties />
   
   
-            <testcase name="videoDel" time="2.340" classname="com.hxk.online.course.VideoDel" />
+            <testcase name="videoDel" time="2.127" classname="com.hxk.online.course.VideoDel" />
       
 </testsuite>
