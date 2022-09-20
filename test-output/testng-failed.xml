@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [test-parameter]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="examplel(failed)">
+    <classes>
+      <class name="com.hxk.online.sale.Nchannel_list">
+        <methods>
+          <include name="nchannel_list"/>
+        </methods>
+      </class> <!-- com.hxk.online.sale.Nchannel_list -->
+      <class name="com.hxk.online.Index">
+        <methods>
+          <include name="index"/>
+        </methods>
+      </class> <!-- com.hxk.online.Index -->
+    </classes>
+  </test> <!-- examplel(failed) -->
+</suite> <!-- Failed suite [test-parameter] -->
