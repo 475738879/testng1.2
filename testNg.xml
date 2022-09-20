@@ -8,7 +8,7 @@
         <!--如果有多个测试类，就写在这里，格式：包名.测试类名-->
         <packages>
             <package name="com.hxk.online" />
-<!--            <package name="com.hxk.online.course" />-->
+            <package name="com.hxk.online.course" />
 <!--            <package name="com.hxk.online.sale" />-->
 <!--            <package name="com.hxk.ltp_app" />-->
         </packages>
