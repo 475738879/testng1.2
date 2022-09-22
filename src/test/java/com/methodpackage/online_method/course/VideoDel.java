@@ -1,7 +1,7 @@
-package com.hxk.lpt_app;
+package com.methodpackage.online_method.course;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.methodpackage.online_method.ReadToken;
 import com.methodpackage.basic.testbasic;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -14,27 +14,21 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Login_Smslogin extends testbasic {
+public class VideoDel extends testbasic {
 
-    public String token;
-    // 登录接口测试并获取token值
-    public String lpt_login() throws Exception {
-
+    public void videoDel(String id)throws Exception{
+        ReadToken readToken = new ReadToken();
+        String token = readToken.readTxt();
         // 通过HttpPost来发送post请求，带Body参数
-        HttpPost httpPost = new HttpPost("https://route.liupinyike.com/sale/lptapp/login-smslogin");
+        HttpPost httpPost = new HttpPost("https://api-test.liupinshuyuan.com/curricula/course/tcvideo/videoDel");
+        httpPost.addHeader("Authorization",token);
+        ArrayList arrayList = new ArrayList();
         JSONObject jsonParam = new JSONObject();
-        jsonParam.put("browser","iphone");
-        jsonParam.put("phone","15990026146");
-        jsonParam.put("platId",0);
-        jsonParam.put("terminal","1");
-        jsonParam.put("verifyCode","121212");
-        jsonParam.put("youzanClentId","61e27e4bbd533f8c25");
+        arrayList.add(0,id);
+        jsonParam.put("id", arrayList);
         //添加headers内容
         httpPost.addHeader("system","eduOnline");
 
@@ -71,42 +65,14 @@ public class Login_Smslogin extends testbasic {
         for(Header header : headerArray) {
             hm.put(header.getName(), header.getValue());
         }
-        // 打印hashmap
-//        System.out.println("Response Headers的结果为："+ hm);
 
         // 获取Content-Type的类型
         HttpEntity httpentity = response.getEntity();
-
         // 获取Response Body结果
         String str = EntityUtils.toString(httpentity, "utf-8");
-        System.out.println("登录接口的Response Body结果为：" + str);
-
-        // 登录成功后，获取服务器返回Body值里的token值
-        JSONObject json = JSON.parseObject(str); //将str的结果转换成json格式
-        JSONObject data = json.getJSONObject("data");
-        token = data.getJSONObject("tokenInfo").getString("refreshToken");
-        System.out.println("login登录成功后的token值为：" + token);
-        return token;
-    }
-    public static void  writeTxt(String str) throws Exception{
-
-        File file=new File("./Api_AutoTestCase");
-        if(!file.exists()){ //如果文件夹不存在
-            file.mkdir(); //创建文件夹
-        }
-        FileWriter fw = null;
-        String path = "./Api_AutoTestCase/lpt_token.txt";
-        File f = new File(path);
-        try {
-            if (!f.exists()) {
-                f.createNewFile();
-            }
-            fw = new FileWriter(f);
-            BufferedWriter out = new BufferedWriter(fw);
-            out.write(str.toString());
-            out.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        System.out.println("index接口的Response Body结果为：" + str);
+        // 添加断言其二，获取服务器响应的状态码
+//        Assert.assertEquals(statusCode, RESPNSE_STATUS_CODE_200, "服务器返回的状态码不是200");
+//        System.out.println("服务器响应的状态码为：" + statusCode);
     }
 }

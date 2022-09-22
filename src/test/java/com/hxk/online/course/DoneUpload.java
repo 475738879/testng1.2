@@ -1,10 +1,10 @@
 package com.hxk.online.course;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hxk.online.ReadToken;
+import com.methodpackage.online_method.ReadToken;
 import com.methodpackage.basic.testbasic;
-import com.methodpackage.course.VideoDel;
-import com.methodpackage.course.VideoList;
+import com.methodpackage.online_method.course.VideoDel;
+import com.methodpackage.online_method.course.VideoList;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.config.RequestConfig;

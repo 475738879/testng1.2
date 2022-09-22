@@ -1,5 +1,6 @@
 package com.hxk.lpt_app;
 
+import com.methodpackage.lpt_method.Login_Smslogin;
 import org.testng.annotations.Test;
 
 public class Execute_lpt_login {

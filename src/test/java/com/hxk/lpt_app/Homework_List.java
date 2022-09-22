@@ -1,9 +1,8 @@
 package com.hxk.lpt_app;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.hxk.online.ReadToken;
 import com.methodpackage.basic.testbasic;
+import com.methodpackage.lpt_method.Lpt_ReadToken;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.config.RequestConfig;

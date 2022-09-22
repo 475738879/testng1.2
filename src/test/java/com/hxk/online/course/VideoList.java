@@ -1,6 +1,6 @@
 package com.hxk.online.course;
 
-import com.hxk.online.ReadToken;
+import com.methodpackage.online_method.ReadToken;
 import com.methodpackage.basic.testbasic;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;

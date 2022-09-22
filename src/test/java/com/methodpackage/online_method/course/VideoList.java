@@ -1,9 +1,9 @@
-package com.methodpackage.course;
+package com.methodpackage.online_method.course;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.hxk.online.ReadToken;
+import com.methodpackage.online_method.ReadToken;
 import com.methodpackage.basic.testbasic;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;

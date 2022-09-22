@@ -1,4 +1,4 @@
-package com.hxk.online;
+package com.methodpackage.online_method;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
