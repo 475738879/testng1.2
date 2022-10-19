@@ -8,9 +8,9 @@ import static org.apache.xalan.xsltc.compiler.util.Util.println;
 
 public class TestDemo {
     @Parameters({"myParam"})
-    @Test(enabled = false)
+    @Test(enabled = false,invocationCount = 10,threadPoolSize = 3)
     public void test1(String param){
-        System.out.println("test1_1"+param);
+        System.out.println("test1_1"+"param:"+param+"Thread id:"+Thread.currentThread().getId());
     }
 
     //parallel是否并行
