@@ -1,0 +1,21 @@
+{
+  "//API_Index":
+  {
+    "//": "\"apiPath\": \"/sale/nchannel-list\",",
+    "//": "\"apiContentType\": \"application/json;charset=utf-8\",",
+    "//": "\"apiName\": \"中文表示接口名字\""
+  },
+  "API_Index":
+  {
+    "apiPath": "/sale/nchannel-list",
+    "apiContentType": "application/json;charset=utf-8",
+    "apiName": "中文表示接口名字"
+  },
+  "API_XXX":
+  {
+    "apiPath": "/sale/nchannel-list",
+    "apiContentType": "application/json;charset=utf-8",
+    "apiName": "中文表示接口名字"
+  }
+
+}
