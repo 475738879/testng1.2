@@ -32,7 +32,7 @@ public class Login extends testbasic {
     public String token;  //定义一个变量，用于存放登录后的token值
 
     // 登录接口测试并获取token值
-    public String login() throws Exception {
+    public String login()throws Exception {
 
         // 通过HttpPost来发送post请求，带Body参数
         HttpPost httpPost = new HttpPost("https://api-test.liupinshuyuan.com/userCenter/api/v1/login/backLogin");

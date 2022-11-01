@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.015">
+           time="1.225">
   <properties />
   
   
-            <testcase name="nchannel_list" time="1.015" classname="com.hxk.online.sale.Nchannel_list" />
+            <testcase name="nchannel_list" time="1.225" classname="com.hxk.online.sale.Nchannel_list" />
       
 </testsuite>

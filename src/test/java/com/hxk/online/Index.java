@@ -1,5 +1,7 @@
 package com.hxk.online;
 
+import com.methodpackage.basic.Read_Folder;
+import com.methodpackage.basic.Read_url;
 import com.methodpackage.online_method.ReadToken;
 import com.methodpackage.basic.testbasic;
 import org.apache.http.Header;
@@ -14,7 +16,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.io.File;
+import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.Properties;
+import java.util.ResourceBundle;
 
 public class Index extends testbasic {
 
@@ -25,7 +31,24 @@ public class Index extends testbasic {
         ReadToken readToken = new ReadToken();
         String token = readToken.readTxt();
 
-        HttpGet httpGet=new HttpGet("https://api-test.liupinshuyuan.com/sale/nchannel-list?page=1&per_page=20");
+        //获取当前类的目录名和类名
+        String name = this.getClass().getName();
+//        String[] split = name.split("\\.");
+//        int len1 = split.length-1;
+//        int len2 = split.length-2;
+//        String url = split[len2]+"."+split[len1];
+//        System.out.println("===="+url);
+        Read_Folder read_folder = new Read_Folder();
+        String url = read_folder.read_folder(name);
+        Read_url read_url = new Read_url();
+        String url_value = read_url.ReadFile(url);
+        System.out.println("url_value:"+url_value);
+
+//        Properties properties = new Properties();
+//        properties.load(this.getClass().getClassLoader().getResourceAsStream("config"));
+        HttpGet httpGet=new HttpGet(url_value);
+        httpGet.addHeader("page","1");
+        httpGet.addHeader("per_page","20");
         httpGet.addHeader("Authorization",token);
         httpGet.addHeader("user-role-type","admin");
 //        StringEntity entity = new StringEntity(jsonParam.toString(),"utf-8");

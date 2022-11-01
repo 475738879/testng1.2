@@ -1,12 +1,20 @@
 package com.hxk.online;
 
+import com.methodpackage.online_method.ReadToken;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+
 import static org.apache.xalan.xsltc.compiler.util.Util.println;
 
 public class TestDemo {
+    //未完成
+    @BeforeMethod
+    public void beforeTest() {
+        System.out.println("@BeforeMethod - runOnceBeforeClass");
+        ReadToken readToken = new ReadToken();
+        String token = readToken.readTxt();
+
+    }
     @Parameters({"myParam"})
     @Test(enabled = false,invocationCount = 10,threadPoolSize = 3)
     public void test1(String param){
