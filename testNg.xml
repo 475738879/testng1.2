@@ -4,7 +4,7 @@
     <test name="examplel">
 
         <parameter name="myParam" value="myParamValue"/>
-<!--        <classes>-->
+<!--        <classes>1-->
 <!--            <class name="com.hxk.online.TestDemo"/>-->
 <!--        </classes>-->
         <!--如果有多个测试类，就写在这里，格式：包名.测试类名-->
