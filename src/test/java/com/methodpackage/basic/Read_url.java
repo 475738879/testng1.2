@@ -33,7 +33,7 @@ public class Read_url {
         //读qu后半段
         String[] url = path.split("\\.");
         for(int i=0;i < url.length;i++){
-            System.out.println("url:"+url[i]);
+            System.out.println("url["+i+"]:"+url[i]);
         }
 
         String laststr="";

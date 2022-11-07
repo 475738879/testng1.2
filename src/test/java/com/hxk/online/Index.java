@@ -14,6 +14,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -23,7 +24,6 @@ import java.util.Properties;
 import java.util.ResourceBundle;
 
 public class Index extends testbasic {
-
     @Test
     public void index() throws Exception{
 //        Login login = new Login();
