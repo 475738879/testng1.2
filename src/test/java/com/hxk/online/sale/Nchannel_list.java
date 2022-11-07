@@ -1,5 +1,7 @@
 package com.hxk.online.sale;
 
+import com.methodpackage.basic.Read_Folder;
+import com.methodpackage.basic.Read_url;
 import com.methodpackage.online_method.ReadToken;
 import com.methodpackage.basic.testbasic;
 import org.apache.http.Header;
@@ -22,7 +24,14 @@ public class Nchannel_list extends testbasic{
         ReadToken readToken = new ReadToken();
         String token = readToken.readTxt();
 
-        HttpGet httpGet=new HttpGet("https://api-test.liupinshuyuan.com/sale/nchannel-list?page=1&per_page=20");
+        String name = this.getClass().getName();
+        Read_Folder read_folder = new Read_Folder();
+        String url = read_folder.read_folder(name);
+        Read_url read_url = new Read_url();
+        String url_value = read_url.ReadFile(url);
+        System.out.println("url_value:"+url_value);
+    
+        HttpGet httpGet=new HttpGet(url_value);
         httpGet.addHeader("Authorization",token);
         httpGet.addHeader("user-role-type","admin");
         httpGet.addHeader("system","eduOnline");

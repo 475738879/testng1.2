@@ -31,13 +31,8 @@ public class Index extends testbasic {
         ReadToken readToken = new ReadToken();
         String token = readToken.readTxt();
 
-        //获取当前类的目录名和类名
+        //得到路径，以获取当前类的目录名和类名的方式
         String name = this.getClass().getName();
-//        String[] split = name.split("\\.");
-//        int len1 = split.length-1;
-//        int len2 = split.length-2;
-//        String url = split[len2]+"."+split[len1];
-//        System.out.println("===="+url);
         Read_Folder read_folder = new Read_Folder();
         String url = read_folder.read_folder(name);
         Read_url read_url = new Read_url();

@@ -1,0 +1,8 @@
+{
+  "API_Nchannel_list":
+  {
+    "apiPath": "/sale/nchannel-list",
+    "apiContentType": "application/json;charset=utf-8",
+    "apiName": "中文表示接口名字"
+  }
+}
